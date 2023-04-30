@@ -1,0 +1,28 @@
+# Output and distribution directories
+out/
+dist/
+
+# Dependencies
+node_modules/
+
+# Testing
+.vscode-test/
+
+# Packaging
+*.vsix
+
+# Environment variables (e.g., API keys)
+.env
+
+# Editor settings
+.vscode/
+*.code-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
