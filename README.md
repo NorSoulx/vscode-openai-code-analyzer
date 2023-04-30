@@ -1,4 +1,4 @@
-# VScode OpenAI Code Analyzer
+# Visual Studio Code OpenAI Code Analyzer
 
 The "vscode-openai-code-analyzer" is a Visual Studio Code extension that uses OpenAI API to analyze and summarize code snippets in various programming languages.
 
@@ -77,4 +77,4 @@ None at the moment.
 
 If you encounter any issues or have any suggestions for improvements, please [create an issue on GitHub](https://github.com/NorSoulx/vscode-openai-code-analyzer/issues).
 
-**Enjoy using the VScode OpenAI Code Analyzer extension!**
+**Enjoy using the Visual Studio Code OpenAI Code Analyzer extension!**
