@@ -39,8 +39,8 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode-test/out/runTest"
+    "test": "node ./node_modules/vscode-test/out/runTest",
+    "package": "npx vsce package"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
