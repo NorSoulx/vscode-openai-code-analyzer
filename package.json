@@ -2,6 +2,7 @@
   "name": "openai-code-analyzer",
   "displayName": "OpenAI Code Analyzer",
   "description": "Analyze and summarize code snippets using OpenAI GPT technology in Visual Studio Code.",
+  "icon": "images/icon_128x128.png",
   "version": "1.0.0",
   "publisher": "NorSoulx",
   "license": "MIT",
