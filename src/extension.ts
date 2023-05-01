@@ -85,6 +85,7 @@ async function summarizeText(text: string): Promise<{ summary: string; tokensUse
 		{
 			model: "text-davinci-002",
 			prompt: `Please analyze and provide a detailed summary, flow and what programming language being is used, of the following code snippet:\n${text}\nSummary:`,
+			// eslint-disable-next-line @typescript-eslint/naming-convention
 			max_tokens: maxTokens,
 			n: 1,
 			stop: null,
@@ -92,7 +93,9 @@ async function summarizeText(text: string): Promise<{ summary: string; tokensUse
 		},
 		{
 			headers: {
+				// eslint-disable-next-line @typescript-eslint/naming-convention
 				'Authorization': `Bearer ${OPENAI_API_KEY}`,
+				// eslint-disable-next-line @typescript-eslint/naming-convention
 				'Content-Type': 'application/json',
 			}
 		}
