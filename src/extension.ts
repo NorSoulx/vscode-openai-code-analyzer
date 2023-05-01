@@ -62,10 +62,6 @@ function createSummaryWebView(context: vscode.ExtensionContext) {
 				  Prism.highlightAll();
 				});
 			  </script>
-			    <div class="item">
-        <pre><code class="language-${languageId}">${text}</code></pre>
-        <div class="summary">${summary}</div>
-      </div>
 		  </body>
 		  </html>
 		`;
