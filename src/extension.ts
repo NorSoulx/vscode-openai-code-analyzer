@@ -79,13 +79,18 @@ async function summarizeText(text: string): Promise<{ summary: string; tokensUse
 	const response = await axios.post(
 		'https://api.openai.com/v1/completions',
 		{
-			model: "text-davinci-002",
+			model: "text-davinci-003",
 			prompt: `Please analyze and provide a detailed summary, flow and what programming language being is used, of the following code snippet:\n${text}\nSummary:`,
 			// eslint-disable-next-line @typescript-eslint/naming-convention
 			max_tokens: maxTokens,
+			// eslint-disable-next-line @typescript-eslint/naming-convention
 			n: 1,
 			stop: null,
-			temperature: 0.5,
+			temperature: 0,
+			// eslint-disable-next-line @typescript-eslint/naming-convention
+			frequency_penalty: 0,
+			// eslint-disable-next-line @typescript-eslint/naming-convention
+  			presence_penalty: 0,
 		},
 		{
 			headers: {
@@ -130,7 +135,10 @@ export function activate(context: vscode.ExtensionContext) {
 		} catch (error) {
 			console.error('Error:', error);
 
-			if (error instanceof Error) {
+
+			if ((error as any).response && (error as any).response.data && (error as any).response.data.error) {
+        			vscode.window.showErrorMessage(`An error occurred while summarizing the text: ${(error as any).response.data.error.message}`);
+      			} else if (error instanceof Error) {
 				vscode.window.showErrorMessage(`An error occurred while summarizing the text: ${error.message}`);
 			} else {
 				vscode.window.showErrorMessage('An error occurred while summarizing the text. Please try again.');
