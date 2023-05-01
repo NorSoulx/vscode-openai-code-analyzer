@@ -1,16 +1,19 @@
 {
   "name": "openai-code-analyzer",
-  "displayName": "openai_code_analyzer",
-  "description": "Analyze code with OpenAI",
+  "displayName": "OpenAI Code Analyzer",
+  "description": "Analyze and summarize code snippets using OpenAI GPT technology in Visual Studio Code.",
+  "version": "1.0.0",
+  "publisher": "NorSoulx",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/NorSoulx/vscode-openai-code-analyzer.git"
   },
-  "version": "0.0.1",
   "engines": {
     "vscode": "^1.77.0"
   },
   "categories": [
+    "Programming Languages",
     "Other"
   ],
   "activationEvents": [],
