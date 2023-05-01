@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import axios from 'axios';
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-const EXTENSION_VERSION = 'v1.0.0';
+const EXTENSION_VERSION = 'v1.0.2';
 const GPT_MODEL = 'text-davinci-003';
 
 if (!OPENAI_API_KEY) {
