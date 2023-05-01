@@ -95,3 +95,7 @@ None at the moment.
 If you encounter any issues or have any suggestions for improvements, please [create an issue on GitHub](https://github.com/NorSoulx/vscode-openai-code-analyzer/issues).
 
 **Enjoy using the Visual Studio Code OpenAI Code Analyzer extension!**
+
+## Example screenshot
+
+![vscode-openai-code-analyzer-example-sql](https://user-images.githubusercontent.com/4839848/235433013-b71bfd1e-c105-4a53-8e50-63d483f82fc4.png)
