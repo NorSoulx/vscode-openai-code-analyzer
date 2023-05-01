@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import axios from 'axios';
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const EXTENSION_VERSION = 'v1.0.0';
+const GPT_MODEL = 'text-davinci-003';
 
 if (!OPENAI_API_KEY) {
 	console.error('The OPENAI_API_KEY environment variable is not set. Please set it to use this extension.');
@@ -51,10 +53,13 @@ function createSummaryWebView(context: vscode.ExtensionContext) {
 		  </head>
 		  <body>
 		  <div class="info">
-		  Max tokens: ${maxTokens}. To change the max tokens, go to Settings and update the "openaiCodeAnalyzer.maxTokens" option.
+		  Extension version: ${EXTENSION_VERSION}<br>
+          	  GPT model: ${GPT_MODEL}<br>
+		  Max tokens: ${maxTokens}.<br>
+		  To change the max tokens, go to Settings and update the "openaiCodeAnalyzer.maxTokens" option.
 		  <br>
 		  Tokens used: ${tokensUsed} (Prompt tokens: ${promptTokens}, Completion tokens: ${completionTokens})
-		</div>
+		  </div>
 			</div>
 			  ${history}
 			  <script>
@@ -90,7 +95,7 @@ async function summarizeText(text: string): Promise<{ summary: string; tokensUse
 			// eslint-disable-next-line @typescript-eslint/naming-convention
 			frequency_penalty: 0,
 			// eslint-disable-next-line @typescript-eslint/naming-convention
-  			presence_penalty: 0,
+			presence_penalty: 0,
 		},
 		{
 			headers: {
@@ -137,8 +142,8 @@ export function activate(context: vscode.ExtensionContext) {
 
 
 			if ((error as any).response && (error as any).response.data && (error as any).response.data.error) {
-        			vscode.window.showErrorMessage(`An error occurred while summarizing the text: ${(error as any).response.data.error.message}`);
-      			} else if (error instanceof Error) {
+				vscode.window.showErrorMessage(`An error occurred while summarizing the text: ${(error as any).response.data.error.message}`);
+			} else if (error instanceof Error) {
 				vscode.window.showErrorMessage(`An error occurred while summarizing the text: ${error.message}`);
 			} else {
 				vscode.window.showErrorMessage('An error occurred while summarizing the text. Please try again.');
