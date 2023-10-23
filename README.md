@@ -119,10 +119,11 @@ If you encounter any issues or have any suggestions for improvements, please [cr
 
 **Enjoy using the Visual Studio Code OpenAI Code Analyzer extension!**
 
-## Example screenshots
+## Example screenshots (v1.1.x)
 
-![vscode-openai-code-analyzer-example-sql](https://user-images.githubusercontent.com/4839848/235433013-b71bfd1e-c105-4a53-8e50-63d483f82fc4.png)
-
-![vscode-openai-code-analyzer-example-rust](https://user-images.githubusercontent.com/4839848/235433439-21b8cee3-b0a9-4fe7-8890-02128cb8c5bb.png)
+![example_v1 1 0_rust_a_001](https://github.com/NorSoulx/vscode-openai-code-analyzer/assets/4839848/8901c4bb-559f-482a-9398-f26ed01bb280)
+![example_v1 1 0_rust_a_002](https://github.com/NorSoulx/vscode-openai-code-analyzer/assets/4839848/6a1fa2a1-be5d-42c3-8c13-d5fdd00bfe59)
+![example_v1 1 0_rust_a_003](https://github.com/NorSoulx/vscode-openai-code-analyzer/assets/4839848/2183697b-6ca6-4603-a597-18502ea5eda8)
+![example_v1 1 0_rust_a_004](https://github.com/NorSoulx/vscode-openai-code-analyzer/assets/4839848/c98d67a9-f48a-4e51-bbe0-47015e675143)
 
 
